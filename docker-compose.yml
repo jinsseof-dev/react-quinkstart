@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  frontend-react:
+    restart: always
+    container_name: react-quickstart
+    build:
+      context: ./docker/develop/
+      dockerfile: Dockerfile
+    volumes:
+      - ./react-quickstart:/app/
+    ports:
+      - "3000:3000"
+    stdin_open: true
